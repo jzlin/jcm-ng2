@@ -1,0 +1,18 @@
+$btn-color-green: rgb(102, 187, 106);
+
+.panel-container {
+  background-color: rgb(200, 230, 201);
+}
+
+.panel-title {
+  color: rgb(27, 94, 32);
+}
+
+.btn {
+  color: white;
+  background-color: $btn-color-green;
+
+  &:hover {
+    background-color: darken($btn-color-green, 10%);
+  }
+}
