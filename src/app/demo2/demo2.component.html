@@ -1,6 +1,43 @@
 <div class="panel-container">
   <div class="panel">
     <h1 class="panel-title">Demo 2</h1>
+    <div class="panel-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Gender</th>
+            <th>Percentage</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of itemList; let i = index;">
+            <td>{{item.gender.name}}</td>
+            <td>{{item.percentage.name}}</td>
+            <td>
+              <button class="btn btn-remove" (click)="removeItem(i)">REMOVE</button>
+            </td>
+          </tr>
+          <tr *ngIf="genderSelectList.length > 0">
+            <td>
+              <select #gender>
+                <option value="">Choose a gender</option>
+                <option *ngFor="let item of genderSelectList" [value]="item.value">{{item.name}}</option>
+              </select>
+            </td>
+            <td>
+              <select #percentage>
+                <option value="">Choose a percentage</option>
+                <option *ngFor="let item of percentageSelectList" [value]="item.value">{{item.name}}</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn btn-add" (click)="addItem(gender.value, percentage.value)">ADD</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="btn-bar">
       <a routerLink="/home" class="btn">BACK TO HOME PAGE</a>
     </div>

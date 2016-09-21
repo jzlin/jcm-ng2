@@ -11,8 +11,69 @@ $btn-color-green: rgb(102, 187, 106);
 .btn {
   color: white;
   background-color: $btn-color-green;
+  border: none;
 
   &:hover {
     background-color: darken($btn-color-green, 10%);
   }
+}
+
+.panel-content {
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.btn-remove {
+  background-color: gray;
+
+  &:hover {
+    background-color: darken(gray, 10%);
+  }
+}
+
+table {
+  width: 100%;
+  font-size: 16px;
+}
+
+thead {
+  font-size: 20px;
+  font-weight: bold;
+
+  & > tr {
+    & > th {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid gray;
+    }
+  }
+}
+
+tbody {
+  & > tr {
+
+    & > td {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid gray;
+    }
+
+    &:last-child {
+      background-color: #eee;
+
+      & > td {
+        border-bottom: 1px solid lightgray;
+      }
+    }
+
+    .btn {
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+}
+
+select {
+  width: 100%;
+  font-size: 16px;
 }
