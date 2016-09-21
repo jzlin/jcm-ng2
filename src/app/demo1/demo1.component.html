@@ -1,6 +1,18 @@
 <div class="panel-container">
   <div class="panel">
     <h1 class="panel-title">Demo 1</h1>
+    <div class="panel-content row">
+      <div class="col-6">
+        <label for="pharmacySelect">Find Pharmacy:</label>
+        <select id="pharmacySelect" (change)="changePharmacy(pharmacy.value)" #pharmacy>
+          <option *ngFor="let item of pharmacies" [value]="item.organisation_id">{{item.organisation_name}}</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label>Address:</label>
+        <p>{{address}}</p>
+      </div>
+    </div>
     <div class="btn-bar">
       <a routerLink="/home" class="btn">BACK TO HOME PAGE</a>
     </div>

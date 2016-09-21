@@ -16,3 +16,41 @@ $btn-color-red: rgb(239, 83, 80);
     background-color: darken($btn-color-red, 10%);
   }
 }
+
+.panel-content {
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+}
+
+.row {
+  display: block;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+}
+
+label {
+  display: block;
+  margin: 0 0 15px;
+  font-size: 20px;
+  color: gray;
+}
+
+select {
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
